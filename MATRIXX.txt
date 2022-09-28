@@ -1,0 +1,72 @@
+# transpose of a matrix
+
+N = 4
+
+# This function stores
+# transpose of A[][] in B[][]
+
+
+*ADDITION
+# importing numpy as np
+import numpy as np
+
+
+#creating first matrix
+A = np.array([[1, 2], [3, 4]])
+
+# creating second matrix
+B = np.array([[4, 5], [6, 7]])
+
+print("Printing elements of first matrix")
+print(A)
+print("Printing elements of second matrix")
+print(B)
+
+# adding two matrix
+print("Addition of two matrix")
+print(np.add(A, B))
+
+*SUBTRACT
+# importing numpy as np
+import numpy as np
+
+
+# creating first matrix
+A = np.array([[1, 2], [3, 4]])
+
+# creating second matrix
+B = np.array([[4, 5], [6, 7]])
+
+print("Printing elements of first matrix")
+print(A)
+print("Printing elements of second matrix")
+print(B)
+
+# subtracting two matrix
+print("Subtraction of two matrix")
+print(np.subtract(A, B))
+
+
+*TRANSPOSE
+def transpose(A, B):
+    for i in range(N):
+        for j in range(N):
+            B[i][j] = A[j][i]
+
+# driver code
+A = [[1, 1, 1, 1],
+     [2, 2, 2, 2],
+     [3, 3, 3, 3],
+     [4, 4, 4, 4]]
+
+
+B = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]] # To store result
+
+
+transpose(A, B)
+
+print("Result matrix is")
+for i in range(N):
+    for j in range(N):
+        print(B[i][j], " ", end='')
+    print()
